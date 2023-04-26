@@ -16,20 +16,14 @@ export class UserLoginComponent implements OnInit {
   ngOnInit(): void {}
 
   userLogin(f: NgForm) {
-    this.loginUserService.loginUser(this.user).subscribe(res=>{
-      if(res){
-                alert('Login Successfully');
-      } else{
-            alert('Error')
-
+    this.loginUserService.loginUser(this.user).subscribe((res) => {
+      if (res) {
+        console.log(res);
+        alert('Login Successfully');
+      } else {
+        alert('Error');
       }
-    })
-    // this.loginUserService.loginUser(this.user).subscribe(
-    //   (data) => {
-    //     alert('Login Successfully');
-    //   },
-    //   (error) => alert('Error')
-    // );
-  }
+    });
 
+  }
 }
