@@ -24,6 +24,5 @@ export class UserLoginComponent implements OnInit {
         alert('Error');
       }
     });
-
   }
 }
